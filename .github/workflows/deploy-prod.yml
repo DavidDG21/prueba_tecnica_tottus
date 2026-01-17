@@ -11,7 +11,7 @@ permissions:
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   REGION: southamerica-west1
-  SERVICE: prueba_tecnica_tottus
+  SERVICE: prueba-tecnica-tottus
 
 jobs:
   deploy:
