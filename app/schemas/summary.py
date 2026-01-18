@@ -1,3 +1,6 @@
+'''
+Módulo de esquemas para las peticiones y respuestas del Resumidor Gemini y se define los modelos Pydantic usados en la API
+'''
 from pydantic import BaseModel, Field
 
 class SummaryRequest(BaseModel):

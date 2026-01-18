@@ -1,3 +1,7 @@
+'''
+Módulo de routers para la versión 1 de la API
+Define los endpoints relacionados con el resumen de textos
+'''
 from fastapi import APIRouter, HTTPException, status, BackgroundTasks
 from app.schemas.summary import SummaryRequest, SummaryResponse
 from app.services.gemini_service import gemini_service
@@ -7,7 +11,7 @@ from app.services.bigquery_service import bigquery_service
 router = APIRouter()
 
 @router.post(
-    "/summarize",
+    "/resumen",
     response_model = SummaryResponse, 
     status_code = status.HTTP_200_OK,
     summary = "Generar resumen de texto",
@@ -49,3 +53,4 @@ async def summarize_text(request: SummaryRequest, background_tasks: BackgroundTa
             status_code = status.HTTP_503_SERVICE_UNAVAILABLE, 
             detail = "Error conectando con el servicio de IA, intente más tarde"
         )
+    
