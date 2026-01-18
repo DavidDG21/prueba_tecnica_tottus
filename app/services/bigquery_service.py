@@ -1,6 +1,10 @@
+'''
+Módulo de servicio para interactuar con Google BigQuery, hacemos la inserción de resúmenes generados
+'''
 from google.cloud import bigquery
 from app.core.config import settings
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import logging
 
 class BigQueryService:
@@ -26,9 +30,10 @@ class BigQueryService:
             logging.warning("BigQuery client no inicializado, no se guardará el resumen.")
             return
         # Preparamos los datos a insertar
+        fecha_actual = datetime.now(ZoneInfo("America/Lima")).replace(microsecond=0)
         rows_to_insert = [
             {
-                "fecha": datetime.utcnow().isoformat(),
+                "fecha": fecha_actual.isoformat(),
                 "texto_original": text,
                 "texto_resumido": summary,
             }

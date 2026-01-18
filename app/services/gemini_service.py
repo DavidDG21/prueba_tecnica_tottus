@@ -1,9 +1,12 @@
+'''
+Módulo de servicio para interactuar con la API de Google Gemini 3 flash preview.
+'''
 from google import genai
 from app.core.config import settings
 
 class GeminiService:
     """
-    Servicio para interactuar con la API de Google Gemini 2.5 flash preview.
+    Servicio para interactuar con la API de Google Gemini 3 flash preview.
     """
     def __init__(self):
 
@@ -34,7 +37,7 @@ class GeminiService:
 
         except Exception as e:
             print(f"Error conectando con la API de Gemini: {e}")
-            # Re-lanzamos el error para que el Router decida qué código HTTP devolver (500, 503, etc.)
+            # Re-lanzamos el error para que el Router decida qué código HTTP devolver
             raise e
 
 # Instanciamos el servicio para usarlo en los routers
