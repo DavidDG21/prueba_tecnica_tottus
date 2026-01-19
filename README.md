@@ -36,7 +36,7 @@ Para ejecutar este proyecto necesitas:
 2. Crea un archivo .env en la raíz del proyecto, de esta manera:
     ```bash
    # .env
-    GEMINI_API_KEY=tu_api_key_aqui (obligatorio)
+    API_KEY_GEMINI=tu_api_key_aqui (obligatorio)
     ID_GOOGLE_CLOUD_PROJECT=id_de_tu_proyecto_gcp (opcional, dejarlo vacio)
 
 ---
