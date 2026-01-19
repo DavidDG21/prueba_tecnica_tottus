@@ -157,6 +157,9 @@ prueba_tecnica_tottus/
 │   └── routers/                # Rutas / Endpoints de la API
 │       ├── __init__.py
 │       └── api_v1.py           # Definición de endpoints (POST /resumen)
+|__ .github/
+│   └── workflows
+|       └── deploy-prod.yml     # Pipeline CI/CD para build y despliegue a Cloud Run
 ├── .dockerignore               
 ├── .env                        # Variables de entorno para local
 ├── .gitignore                  
