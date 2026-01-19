@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     Clase de configuración global usando Pydantic BaseSettings y carga variables de entorno desde un archivo .env o desde el entorno del sistema.
     '''
     # Metadatos de la API
-    PROJECT_NAME: str = "Reto de un resumidor de textos con Gemini 2.5 flash preview"
+    PROJECT_NAME: str = "Reto de un resumidor de textos con Gemini 3 flash preview"
     VERSION: str = "1.0.0"
     
     # Configuración de Entorno

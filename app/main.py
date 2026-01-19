@@ -16,9 +16,9 @@ app = FastAPI(
 )
 # añadimos el router de la versión 1 de la API,
 # la ruta es /api/v1/resumen
-app.include_router(api_v1.router, prefix="/api/v1", tags=["Resumidor de Textos"])
+app.include_router(api_v1.router, prefix="/api/v1", tags=["Resumidor de textos"])
 
-@app.get("/", tags=["Health Check"])
+@app.get("/", tags=["Prueba de estado"])
 async def root():
     """
     Endpoint para verificar que el servicio está vivo.
